@@ -18,9 +18,9 @@
   "authors": "Rahat Chowdhury, Beth Sergeant, Ashraful Mallik, Jason Zheng",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/klendi/mern-apollo-graphql-boilerplate/issues"
+    "url": "https://github.com/Rahat-ch/project_seed/issues"
   },
-  "homepage": "https://github.com/klendi/mern-apollo-graphql-boilerplate#readme",
+  "homepage": "https://projectseed.dev",
   "dependencies": {
     "apollo-server-express": "^2.0.4",
     "concurrently": "^3.6.1",
