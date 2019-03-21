@@ -3,7 +3,10 @@ import "./App.css";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider, Query } from "react-apollo";
 import gql from "graphql-tag";
-import logo from "./assets/images/psLogo.png";
+
+import LoginBtn from "./Components/LoginBtn"
+import Logo from "./Components/Logo"
+import Cards from "./Components/Card"
 
 const client = new ApolloClient({
   uri: "http://localhost:5000/graphql"
@@ -23,17 +26,20 @@ class App extends Component {
     return (
       <ApolloProvider client={client}>
         <div>
-          {/* Panel Layout */}
+          {/* =================Panel Layout =================*/}
           <div className="ui  center aligned padded grid">
-            <div className="ten wide white column leftPanel" />
+            <div className="ten wide white column leftPanel">
+              <Cards />
+            
+            </div>
+
             <div className="six wide column rightPanel">
-              <img
-                src={logo}
-                style={{ height: 350, position: "relative", top: 100 }}
-              />
+              <Logo/>
+              <LoginBtn />
+              <br></br>
             </div>
           </div>
-          {/* Panel Layout */}
+          {/* =================Panel Layout================= */}
           {/* Please do not delete the code below or rahat will cry */}
           {/* Example Get Data from db with Graphql query */}
           <Query query={GET_USERS}>
