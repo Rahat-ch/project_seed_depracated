@@ -7,7 +7,7 @@ import cors from 'cors'
 import chalk from 'chalk'
 
 const app = express()
-const PORT = 5000
+const PORT = process.env.PORT || 5000
 
 require('./models/User')
 const User = mongoose.model('User')
