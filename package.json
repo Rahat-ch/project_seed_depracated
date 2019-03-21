@@ -9,7 +9,10 @@
     "node-server": "node --prefix server/server.js",
     "server": "npm start --prefix server",
     "client": "npm start --prefix client",
-    "start": "concurrently \"npm run server\" \"npm run client\""
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm install && npm run-script build",
+    "heroku-postbuild": "npm run build"
+
   },
   "repository": {
     "type": "git",
