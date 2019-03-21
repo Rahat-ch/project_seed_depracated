@@ -12,6 +12,10 @@ const client = new ApolloClient({
   uri: "http://localhost:5000/graphql"
 });
 
+const gitClient = new ApolloClient({
+  uri:"some github address"
+});
+
 const GET_USERS = gql`
   {
     allUsers {
