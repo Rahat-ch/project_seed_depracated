@@ -4,6 +4,8 @@ import ApolloClient from 'apollo-boost'
 import { ApolloProvider, Query } from 'react-apollo'
 import gql from 'graphql-tag'
 
+
+
 const client = new ApolloClient({
   uri: 'http://localhost:5000/graphql'
 })
