@@ -37,7 +37,7 @@ class App extends Component {
 
               <Logo/>
               <LoginBtn />
-              <p>this is a testing thing feel free to delete</p>
+              <p>This is another test for heroku building purposes</p>
               <br></br>
 
             </div>
