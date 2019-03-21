@@ -1,14 +1,13 @@
-import React, { Component } from 'react'
-import './App.css'
-import ApolloClient from 'apollo-boost'
-import { ApolloProvider, Query } from 'react-apollo'
-import gql from 'graphql-tag'
-
-
+import React, { Component } from "react";
+import "./App.css";
+import ApolloClient from "apollo-boost";
+import { ApolloProvider, Query } from "react-apollo";
+import gql from "graphql-tag";
+import logo from "./assets/images/psLogo.png";
 
 const client = new ApolloClient({
-  uri: 'http://localhost:5000/graphql'
-})
+  uri: "http://localhost:5000/graphql"
+});
 
 const GET_USERS = gql`
   {
@@ -17,26 +16,33 @@ const GET_USERS = gql`
       name
     }
   }
-`
+`;
 
 class App extends Component {
   render() {
     return (
       <ApolloProvider client={client}>
         <div>
-          <h1 className="main-header">MERN + Apollo-Graphql boilerplate</h1>
-          <h4 className="secondary-header">
-            What are you waiting for ? Go and create something awesome!!!
-          </h4>
+          {/* Panel Layout */}
+          <div className="ui  center aligned padded grid">
+            <div className="ten wide white column leftPanel" />
+            <div className="six wide column rightPanel">
+              <img
+                src={logo}
+                style={{ height: 350, position: "relative", top: 100 }}
+              />
+            </div>
+          </div>
+          {/* Panel Layout */}
           {/* Please do not delete the code below or rahat will cry */}
           {/* Example Get Data from db with Graphql query */}
           <Query query={GET_USERS}>
             {({ loading, error, data }) => {
-              if (loading) return 'Loading...'
-              if (error) return `Error! ${error.message}`
+              if (loading) return "Loading...";
+              if (error) return `Error! ${error.message}`;
 
-              console.log('data is')
-              console.log(data)
+              console.log("data is");
+              console.log(data);
 
               return (
                 <ul>
@@ -44,13 +50,13 @@ class App extends Component {
                     <li key={user.id}>{user.name}</li>
                   ))}
                 </ul>
-              )
+              );
             }}
           </Query>
         </div>
       </ApolloProvider>
-    )
+    );
   }
 }
 
-export default App
+export default App;

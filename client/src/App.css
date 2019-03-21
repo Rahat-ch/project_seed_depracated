@@ -37,7 +37,16 @@ h1.main-header {
 }
 
 body {
-  background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+ 
+}
+
+.leftPanel{
+  height:100vh;
+  background-image: linear-gradient(to top, #ccff99 0%, #f4fae6 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+.rightPanel{
+
 }
