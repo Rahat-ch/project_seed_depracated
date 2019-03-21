@@ -34,9 +34,11 @@ class App extends Component {
             </div>
 
             <div className="six wide column rightPanel">
+
               <Logo/>
               <LoginBtn />
               <br></br>
+
             </div>
           </div>
           {/* =================Panel Layout================= */}
