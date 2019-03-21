@@ -28,7 +28,7 @@ class App extends Component {
           </h4>
           {/* Please do not delete the code below or rahat will cry */}
           {/* Example Get Data from db with Graphql query */}
-          {/* <Query query={GET_USERS}>
+          <Query query={GET_USERS}>
             {({ loading, error, data }) => {
               if (loading) return 'Loading...'
               if (error) return `Error! ${error.message}`
@@ -44,7 +44,7 @@ class App extends Component {
                 </ul>
               )
             }}
-          </Query> */}
+          </Query>
         </div>
       </ApolloProvider>
     )
