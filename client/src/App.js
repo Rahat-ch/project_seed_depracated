@@ -31,6 +31,7 @@ class App extends Component {
                 src={logo}
                 style={{ height: 350, position: "relative", top: 100 }}
               />
+              <p>This is a test to get deployed. This can be deleted at any time.</p>
             </div>
           </div>
           {/* Panel Layout */}
